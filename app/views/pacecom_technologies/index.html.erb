@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<head>
+  <script type= "text/javascript"  src="file.js" ></script>
+</head>
+<body style="background-color:powderblue";>
+
+<%= image_tag("logos/pp.jpg", width: '120px',style: 'float:left') %>
+  
+<h1 style="color:black;font-size:40px;"><center>Pacecom Technologies Pvt Lmt</center></h1>
+ 
+  
+
+
+<center><table cellspacing="30" border="0" ;><center>
+
+  <thead>
+    <tr><br>
+      <th>FIRST NAME<br></th>
+      <th>LAST NAME<br></th>
+      <th>PHONE</th>
+      <th>JOB ROLE</th>
+      <th>PLACE</th>
+      <th>READ</th>
+      <th>UPDATE</th>
+      <th>DESTROY</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pacecom_technologies.each do |pacecom_technology| %>
+      <tr>
+        <td><%= pacecom_technology.First_Name %></td>
+        <td><%= pacecom_technology.Last_Name %></td>
+        <td><%= pacecom_technology.Phone %></td>
+        <td><%= pacecom_technology.Job_Role %></td>
+        <td><%= pacecom_technology.Place %></td>
+        <td><%= link_to 'READ', pacecom_technology %></td>
+        <td><%= link_to 'UPDATE', edit_pacecom_technology_path(pacecom_technology) %></td>
+        <td><%= link_to 'DESTROY', pacecom_technology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'CREATE NEW USER', new_pacecom_technology_path %>
+
+</body>

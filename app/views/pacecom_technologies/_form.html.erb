@@ -1,0 +1,43 @@
+<%= form_with(model: pacecom_technology, local: true) do |form| %>
+ 
+
+  <div class="field">
+    <%= form.label :First_Name %>
+    <%= form.text_field :First_Name %>
+    <p style="color:tomato;" class='error'><%= show_errors(@pacecom_technology, :First_Name) %></p>
+    
+  </div><br>
+
+  <div class="field">
+    <%= form.label :Last_Name %>
+    <%= form.text_field :Last_Name %>
+    <p style="color:tomato;" class='error'><%= show_errorsa(@pacecom_technology, :Last_Name) %></p>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :Phone %>  
+ <%= form.text_field :Phone, :class => 'field', :onkeypress => 'return isNumber(event)' %>
+    <p style="color:tomato;" class='error'><%= show_errorsb(@pacecom_technology, :Phone) %></p>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :Job_Role %>
+    <%= form.text_area :Job_Role %>
+    <p style="color:tomato;" class='error'><%= show_errorsc(@pacecom_technology, :Job_Role) %></p>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :Place %>
+    <%= form.text_area :Place %>
+    <p style="color:tomato;" class='error'><%= show_errorsd(@pacecom_technology, :Place) %></p>
+  </div><br>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+ </div><br><br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

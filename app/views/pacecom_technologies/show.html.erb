@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @pacecom_technology.First_Name %>
+ 
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @pacecom_technology.Last_Name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @pacecom_technology.Phone %>
+</p>
+
+<p>
+  <strong>Job role:</strong>
+  <%= @pacecom_technology.Job_Role %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @pacecom_technology.Place %>
+</p>
+
+<p>
+<%= image_tag(@pacecom_technology.image, style: 'height:150px;width:150px') %>
+
+</p>
+
+<%= link_to 'Edit', edit_pacecom_technology_path(@pacecom_technology) %> |
+<%= link_to 'Back', pacecom_technologies_path %>
