@@ -4,7 +4,10 @@ class PacecomTechnology < ApplicationRecord
     validates :First_Name, :Last_Name, :Phone, :Job_Role, :Place, :presence => true
    validates :Phone, presence: true
     validate :correct_image_type
-    validates_uniqueness_of :First_Name
+   # validates_uniqueness_of :First_Name, :message =>'should be unique'
+   validates_uniqueness_of :First_Name, message:"should be unique"
+   #validates_uniqueness_of :First_Name, scope: :Last_Name
+   #add_index :pacecom_technologies, [ :First_Name, :Last_Name ], :unique => true, message 'noooo'
   
     
     private

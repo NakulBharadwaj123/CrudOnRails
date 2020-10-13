@@ -1,14 +1,13 @@
 module PacecomTechnologiesHelper
-    def show_errors(object,first_Name)
-        if object.errors.any?
-          object.errors.add(:first_Name, '*Name should be unique').join(',')
-        end
-          if !object.errors.messages[first_Name].blank?
-            #object.errors.messages[first_Name].join(', ')
-            object.errors.add(:first_Name, '*cannot be blank').join(',')
-
-        end
+   
+  
+  def show_errors(object,first_Name)
+     if object.errors.any?  
+      if  !object.errors.messages[first_Name].blank?
+        object.errors.add(:first_Name, '*cannot be blank, *should be unique').join(',')
       end
+    end
+  end
       
       def show_errorsa(object,last_Name)
         if object.errors.any?
@@ -45,5 +44,5 @@ module PacecomTechnologiesHelper
               object.errors.add(:place, '*cannot be blank.').join('')
             end
           end
-          end
-end
+        end
+      end        
