@@ -1,15 +1,77 @@
 <p id="notice"><%= notice %></p>
 
 <head>
-  <script type= "text/javascript"  src="file.js" ></script>
-</head>
-<body style="background-color:powderblue";>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= image_tag("logos/pp.jpg", width: '120px',style: 'float:left') %>
+<style>
+* {box-sizing: border-box}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  width: 100% ;
+  position: fixed;
+  top: 0;
+  overflow: auto;
+  background-color: BLUE;
+ # background-color: powderblue;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px ;
+  width: 15% ;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: BLUE;
+  #background-color: powderblue;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .topnav a {
+    float: none;
+    display: block;
+    width: 100% ;
+    text-align: left;
+  }
+}
+</style>
+</head>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="#login">Login</a>
+  <a href="#signup">SignUp</a>
+</div>
+  
+
+<script type= "text/javascript"  src="file.js" ></script>
+
+<body style="background-color:yellow  ";><br><br>
+
+<%= image_tag("logos/222.png", width: '120px',style: 'float:left') %>
   
 <h1 style="color:black;font-size:40px;"><center>Pacecom Technologies Pvt Lmt</center></h1>
- 
-  
+
+
+
 
 
 <center><table cellspacing="30" border="0" ;><center>
